@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libMecanumDriveController.so -o /home/vaclavekjan/catkin_ws4/devel/lib/libMecanumDriveController.so CMakeFiles/MecanumDriveController.dir/src/controller.cpp.o 

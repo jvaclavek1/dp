@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="mobile_robot10" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="revLB_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="revLB">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="revLB_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="revLF_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="revLF">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="revLF_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="revRF_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="revRF">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="revRF_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="revRB_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="revRB">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="revRB_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

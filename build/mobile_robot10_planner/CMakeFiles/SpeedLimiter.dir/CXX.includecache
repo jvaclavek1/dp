@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vaclavekjan/catkin_ws4/src/mobile_robot10_planner/include/speed_limiter.h
+
+/home/vaclavekjan/catkin_ws4/src/mobile_robot10_planner/src/speed_limiter.cpp
+algorithm
+-
+../include/speed_limiter.h
+/home/vaclavekjan/catkin_ws4/src/mobile_robot10_planner/include/speed_limiter.h
+

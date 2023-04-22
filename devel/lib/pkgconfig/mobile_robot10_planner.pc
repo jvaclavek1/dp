@@ -1,0 +1,8 @@
+prefix=/home/vaclavekjan/catkin_ws4/devel
+
+Name: mobile_robot10_planner
+Description: Description of mobile_robot10_planner
+Version: 0.0.0
+Cflags: -I/home/vaclavekjan/catkin_ws4/src/mobile_robot10_planner/include
+Libs: -L${prefix}/lib -lcontroller
+Requires: controller_interface realtime_tools

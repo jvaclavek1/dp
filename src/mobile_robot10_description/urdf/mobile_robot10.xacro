@@ -1,0 +1,275 @@
+<?xml version="1.0" ?>
+<robot name="mobile_robot10" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mobile_robot10_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mobile_robot10_description)/urdf/mobile_robot10.trans" />
+<xacro:include filename="$(find mobile_robot10_description)/urdf/mobile_robot10.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0020658010069307346 0.0014540542329803576 0.13278563199845814" rpy="0 0 0"/>
+    <mass value="4.254378190431725"/>
+    <inertia ixx="0.111017" iyy="0.100165" izz="0.193805" ixy="5e-06" iyz="-0.0" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_RightBack_1">
+  <inertial>
+    <origin xyz="2.3547808934085146e-05 0.03723394965455805 -6.253738071324011e-06" rpy="0 0 0"/>
+    <mass value="0.24966798972825235"/>
+    <inertia ixx="0.000251" iyy="0.000108" izz="0.000251" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.118927 0.124046 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_RightBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.118927 0.124046 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_RightBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_RightFront_1">
+  <inertial>
+    <origin xyz="2.3547808934029635e-05 0.03723394965455806 -6.253738070879922e-06" rpy="0 0 0"/>
+    <mass value="0.24966798972825235"/>
+    <inertia ixx="0.000251" iyy="0.000108" izz="0.000251" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.123073 0.124046 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_RightFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.123073 0.124046 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_RightFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_LeftFront_1">
+  <inertial>
+    <origin xyz="2.354780893325248e-05 -0.03723384118858371 5.98091283564306e-06" rpy="0 0 0"/>
+    <mass value="0.24966798972825235"/>
+    <inertia ixx="0.000251" iyy="0.000108" izz="0.000251" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.123073 -0.126954 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_LeftFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.123073 -0.126954 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_LeftFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_LeftBack_1">
+  <inertial>
+    <origin xyz="2.354780893312758e-05 -0.03723384118858267 5.980912835740204e-06" rpy="0 0 0"/>
+    <mass value="0.24966798972825235"/>
+    <inertia ixx="0.000251" iyy="0.000108" izz="0.000251" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.118927 -0.126954 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_LeftBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.118927 -0.126954 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/motor_LeftBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_LeftBack_1">
+  <inertial>
+    <origin xyz="-0.0002211856349259439 0.09160029831890285 0.00011976017282845641" rpy="0 0 0"/>
+    <mass value="0.23076924157480921"/>
+    <inertia ixx="0.000435" iyy="0.000747" izz="0.000435" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.118915 -0.169604 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_LeftBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.118915 -0.169604 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_LeftBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_LeftFront_1">
+  <inertial>
+    <origin xyz="-5.743380377766505e-05 0.09191036254399113 0.00012495117271071887" rpy="0 0 0"/>
+    <mass value="0.2305439882563863"/>
+    <inertia ixx="0.000437" iyy="0.000748" izz="0.000437" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.123073 -0.169604 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_LeftFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.123073 -0.169604 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_LeftFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_RightFront_1">
+  <inertial>
+    <origin xyz="-0.00022118563492501409 -0.09160018985292717 -0.00012003299806354062" rpy="0 0 0"/>
+    <mass value="0.23076924157480921"/>
+    <inertia ixx="0.000435" iyy="0.000747" izz="0.000435" ixy="-1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.123085 0.166696 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_RightFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.123085 0.166696 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_RightFront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_RightBack_1">
+  <inertial>
+    <origin xyz="-5.719253608364727e-05 -0.09191025407801684 -0.0001251999899373052" rpy="0 0 0"/>
+    <mass value="0.2305439882563863"/>
+    <inertia ixx="0.000437" iyy="0.000748" izz="0.000437" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.118915 0.166696 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_RightBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.118915 0.166696 -0.090327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/wheel_RightBack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="1.9045593262516022e-07 5.4232985110353946e-08 0.012499863587381699" rpy="0 0 0"/>
+    <mass value="1.541343895667494"/>
+    <inertia ixx="0.001044" iyy="0.001044" izz="0.001927" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002073 -0.001454 -0.181327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002073 -0.001454 -0.181327" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mobile_robot10_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="-0.118927 -0.124046 0.090327" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_RightBack_1"/>
+</joint>
+
+<joint name="Rigid 24" type="fixed">
+  <origin xyz="0.123073 -0.124046 0.090327" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_RightFront_1"/>
+</joint>
+
+<joint name="Rigid 25" type="fixed">
+  <origin xyz="0.123073 0.126954 0.090327" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_LeftFront_1"/>
+</joint>
+
+<joint name="Rigid 26" type="fixed">
+  <origin xyz="-0.118927 0.126954 0.090327" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_LeftBack_1"/>
+</joint>
+
+<joint name="revLB" type="continuous">
+  <origin xyz="1.2e-05 0.04265 0.0" rpy="0 0 0"/>
+  <parent link="motor_LeftBack_1"/>
+  <child link="wheel_LeftBack_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="revLF" type="continuous">
+  <origin xyz="0.0 0.04265 0.0" rpy="0 0 0"/>
+  <parent link="motor_LeftFront_1"/>
+  <child link="wheel_LeftFront_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="revRF" type="continuous">
+  <origin xyz="1.2e-05 -0.04265 0.0" rpy="0 0 0"/>
+  <parent link="motor_RightFront_1"/>
+  <child link="wheel_RightFront_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="revRB" type="continuous">
+  <origin xyz="1.2e-05 -0.04265 0.0" rpy="0 0 0"/>
+  <parent link="motor_RightBack_1"/>
+  <child link="wheel_RightBack_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid 31" type="fixed">
+  <origin xyz="0.002073 0.001454 0.181327" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>

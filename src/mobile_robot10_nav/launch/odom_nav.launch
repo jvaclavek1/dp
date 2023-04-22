@@ -1,0 +1,44 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro $(find mobile_robot10_nav)/mobile_robot10.urdf"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model mobile_robot10"/>
+  <node name= "joint_state_publisher" pkg= "joint_state_publisher" type= "joint_state_publisher"/>
+<node name= "robot_state_publisher" pkg= "robot_state_publisher" type= "robot_state_publisher"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+<arg name="world_name" value="$(find mobile_robot10_description)/worlds/my_world1.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+
+  <arg name="map_file" default="$(find mobile_robot10_nav)/map/my_world2_map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  <arg name="initial_pose_x" default="0.0" />
+  <arg name="initial_pose_y" default="0.0" />
+  <arg name="initial_pose_a" default="0.0" />
+  <include file="$(find mobile_robot10_nav)/launch/include/amcl.launch" >
+    <arg name="initial_pose_x" value="$(arg initial_pose_x)" />
+    <arg name="initial_pose_y" value="$(arg initial_pose_y)" />
+    <arg name="initial_pose_a" value="$(arg initial_pose_a)" />
+  </include>
+
+ <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+ 
+ <rosparam file="$(find mobile_robot10_nav)/params/costmap_common.yaml" command="load" ns="global_costmap"/>
+  <rosparam file="$(find mobile_robot10_nav)/params/costmap_common.yaml" command="load" ns="local_costmap"/>
+  
+  <rosparam file="$(find mobile_robot10_nav)/params/global_costmap.yaml" command="load" />
+  <rosparam file="$(find mobile_robot10_nav)/params/local_costmap.yaml" command="load" />
+
+  <rosparam file="$(find mobile_robot10_nav)/params/base_local_planner.yaml" command="load" />
+  <rosparam file="$(find mobile_robot10_nav)/params/move_base.yaml" command="load" />
+
+  <remap from="odom" to="odometry/filtered" />
+ </node>
+  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mobile_robot10_nav)/mecanum1.rviz"/>
+ 
+ 
+</launch>
