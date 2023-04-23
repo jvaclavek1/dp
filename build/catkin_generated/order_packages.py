@@ -2,4 +2,4 @@
 source_root_dir = '/home/vaclavekjan/catkin_ws4/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/noetic'.split(';') if '/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/vaclavekjan/catkin_ws4/devel;/opt/ros/noetic'.split(';') if '/home/vaclavekjan/catkin_ws4/devel;/opt/ros/noetic' != '' else []

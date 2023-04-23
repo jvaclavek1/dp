@@ -132,8 +132,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/vaclavekjan/catkin_ws4/build/gtest/cmake_install.cmake")
   include("/home/vaclavekjan/catkin_ws4/build/mobile_robot10_description/cmake_install.cmake")
-  include("/home/vaclavekjan/catkin_ws4/build/mecanum_drive/cmake_install.cmake")
   include("/home/vaclavekjan/catkin_ws4/build/mobile_robot10_nav/cmake_install.cmake")
+  include("/home/vaclavekjan/catkin_ws4/build/mobile_robot10_planner/cmake_install.cmake")
 
 endif()
 

@@ -6,5 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("mobile_robot10_description")
-subdirs("mecanum_drive")
 subdirs("mobile_robot10_nav")
+subdirs("mobile_robot10_planner")
