@@ -50,8 +50,8 @@
 
 <gazebo>
 ...
-
 </gazebo>
+
   
   <gazebo reference="lidar_1">
     <sensor name="head_hokuyo_sensor" type="ray">

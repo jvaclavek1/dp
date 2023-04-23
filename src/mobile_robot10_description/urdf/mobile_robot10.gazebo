@@ -3,9 +3,10 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
-  <gazebo>
-... 
-  </gazebo>  
+<gazebo>
+...
+</gazebo>
+
 
   <gazebo reference="lidar_1">
     <sensor type="ray" name="head_hokuyo_sensor">
