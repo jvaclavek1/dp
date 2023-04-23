@@ -1,2 +1,2 @@
-mobile_robot10_description:mobile_robot10_nav:mobile_robot10_planner
+mecanum_drive:mobile_robot10_description:mobile_robot10_nav
 -DCATKIN_DEVEL_PREFIX=/home/vaclavekjan/catkin_ws4/devel -DCMAKE_INSTALL_PREFIX=/home/vaclavekjan/catkin_ws4/install -G Unix Makefiles

@@ -1,6 +1,0 @@
-<launch>
-  <rosparam command="load" file="$(find mobile_robot10_planner)/config/control.yaml" />
-
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" />
-
-</launch>

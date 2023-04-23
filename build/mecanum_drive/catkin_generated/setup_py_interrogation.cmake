@@ -1,0 +1,7 @@
+set(mecanum_drive_SETUP_PY_SETUP_MODULE "distutils.core")
+set(mecanum_drive_SETUP_PY_VERSION "1.0.0")
+set(mecanum_drive_SETUP_PY_SCRIPTS "")
+set(mecanum_drive_SETUP_PY_PACKAGES "mecanum_drive")
+set(mecanum_drive_SETUP_PY_PACKAGE_DIRS "src/mecanum_drive")
+set(mecanum_drive_SETUP_PY_MODULES "")
+set(mecanum_drive_SETUP_PY_MODULE_DIRS "")

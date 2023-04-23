@@ -1,0 +1,8 @@
+prefix=/home/vaclavekjan/catkin_ws4/install
+
+Name: mecanum_drive
+Description: Description of mecanum_drive
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs

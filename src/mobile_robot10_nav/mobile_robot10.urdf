@@ -47,26 +47,11 @@
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>mobile_robot10</robotNamespace>
-    </plugin>
 
-    <plugin name="base_move" filename="libgazebo_ros_force_based_move.so">
-      <robotNamespace>mobile_robot10</robotNamespace>
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
-      <odometryRate>25.0</odometryRate>
-      <robotBaseFrame>base_link</robotBaseFrame>
-      <cmdVelTimeOut>0.25</cmdVelTimeOut>
-      <publishOdometry>true</publishOdometry>
-      <publishOdometryTf>true</publishOdometryTf>
-      <yaw_velocity_p_gain>500.0</yaw_velocity_p_gain>
-      <x_velocity_p_gain>10000.0</x_velocity_p_gain>
-      <y_velocity_p_gain>10000.0</y_velocity_p_gain>
-    </plugin> 
-  </gazebo>
+<gazebo>
+...
+
+</gazebo>
   
   <gazebo reference="lidar_1">
     <sensor name="head_hokuyo_sensor" type="ray">
